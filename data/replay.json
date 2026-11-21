@@ -1,0 +1,191 @@
+{
+ "generated_at": "2026-11-15T06:11:35+00:00",
+ "note": "Historical replays for the demo. These are observed/reanalysis days, not forecasts and not current conditions. The UI labels them.",
+ "events": [
+  {
+   "id": "dust-2024-02-05",
+   "kind": "dust",
+   "date": "2024-02-05",
+   "title_en": "February 2024 dust surge",
+   "title_ha": "Guguwar \u0199ura ta Faburairu 2024",
+   "context_en": "The dustiest day in the 605-day harmattan sample: 2,354 \u00b5g/m\u00b3 daily mean dust, with 2,302 \u00b5g/m\u00b3 the next day.",
+   "context_ha": "Ranar da \u0199ura ta fi yawa a cikin kwanaki 605 da aka auna: 2,354 \u00b5g/m\u00b3 a matsakaici, sai 2,302 \u00b5g/m\u00b3 washegari.",
+   "source": "CAMS/ERA5 archive via Open-Meteo (climatology_raw.json)",
+   "series": [
+    {
+     "date": "2024-01-28",
+     "dust": 1560.833,
+     "aod": 0.672,
+     "wind": 12.8,
+     "rh": 17.583,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-01-29",
+     "dust": 1295.208,
+     "aod": 0.59,
+     "wind": 11.188,
+     "rh": 17.125,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-01-30",
+     "dust": 1338.375,
+     "aod": 0.678,
+     "wind": 11.883,
+     "rh": 18.292,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-01-31",
+     "dust": 1757.125,
+     "aod": 0.74,
+     "wind": 14.2,
+     "rh": 18.792,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-02-01",
+     "dust": 1855.167,
+     "aod": 0.761,
+     "wind": 14.137,
+     "rh": 17.458,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-02-02",
+     "dust": 1848.583,
+     "aod": 0.904,
+     "wind": 14.221,
+     "rh": 17.25,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-02-03",
+     "dust": 1902.042,
+     "aod": 0.902,
+     "wind": 14.446,
+     "rh": 12.292,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-02-04",
+     "dust": 2051.042,
+     "aod": 0.807,
+     "wind": 15.421,
+     "rh": 9.792,
+     "precip": 0.0,
+     "season": "2023/24"
+    },
+    {
+     "date": "2024-02-05",
+     "dust": 2353.792,
+     "aod": 0.768,
+     "wind": 16.721,
+     "rh": 11.208,
+     "precip": 0.0,
+     "season": "2023/24"
+    }
+   ]
+  },
+  {
+   "id": "flood-2024-08-19",
+   "kind": "flood",
+   "date": "2024-08-19",
+   "title_en": "August 2024 flash-flood rain",
+   "title_ha": "Ruwan ambaliya na Agusta 2024",
+   "context_en": "A real rainy-season day with 38.7 mm in 24 h. The flood rule puts this above the 30 mm high floor; the next day is included in the 72-hour total.",
+   "context_ha": "Ranar ruwan sama ta gaske: 38.7 mm cikin awa 24. Dokar ambaliya ta ha\u0257a wannan da ruwan kwanaki uku.",
+   "source": "ERA5 archive via Open-Meteo, fetched 2026-11-15",
+   "series": [
+    {
+     "date": "2024-08-10",
+     "dust": 19.375,
+     "aod": 0.237,
+     "wind": 8.75,
+     "rh": 75.292,
+     "precip": 1.0
+    },
+    {
+     "date": "2024-08-11",
+     "dust": 10.542,
+     "aod": 0.348,
+     "wind": 10.279,
+     "rh": 73.125,
+     "precip": 1.1
+    },
+    {
+     "date": "2024-08-12",
+     "dust": 1.917,
+     "aod": 0.362,
+     "wind": 10.746,
+     "rh": 81.5,
+     "precip": 3.0
+    },
+    {
+     "date": "2024-08-13",
+     "dust": 0.75,
+     "aod": 0.282,
+     "wind": 13.367,
+     "rh": 77.625,
+     "precip": 0.4
+    },
+    {
+     "date": "2024-08-14",
+     "dust": 5.125,
+     "aod": 0.367,
+     "wind": 11.546,
+     "rh": 73.542,
+     "precip": 0.6
+    },
+    {
+     "date": "2024-08-15",
+     "dust": 4.375,
+     "aod": 0.383,
+     "wind": 9.387,
+     "rh": 83.333,
+     "precip": 7.8
+    },
+    {
+     "date": "2024-08-16",
+     "dust": 0.0,
+     "aod": 0.228,
+     "wind": 18.15,
+     "rh": 82.833,
+     "precip": 6.7
+    },
+    {
+     "date": "2024-08-17",
+     "dust": 0.0,
+     "aod": 0.206,
+     "wind": 10.896,
+     "rh": 74.75,
+     "precip": 1.4
+    },
+    {
+     "date": "2024-08-18",
+     "dust": 4.25,
+     "aod": 0.411,
+     "wind": 12.938,
+     "rh": 81.542,
+     "precip": 7.8
+    },
+    {
+     "date": "2024-08-19",
+     "dust": 3.042,
+     "aod": 0.362,
+     "wind": 14.625,
+     "rh": 90.792,
+     "precip": 38.7
+    }
+   ]
+  }
+ ]
+}

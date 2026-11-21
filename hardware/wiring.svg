@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 780" width="1240" height="780" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <style>
+      .box { fill:#fffdf8; stroke:#d9c9ae; stroke-width:1.5; }
+      .board { fill:#0f6f74; stroke:#0a4f52; stroke-width:2; }
+      .pin { fill:#f8f1e3; }
+      .t { fill:#1d1712; font-size:13px; }
+      .small { fill:#6f5f4e; font-size:10.5px; }
+      .pinlabel { fill:#f8f1e3; font-size:11px; font-family:ui-monospace, monospace; }
+      .title { fill:#1d1712; font-size:24px; font-weight:600; }
+      .sub { fill:#8c7a66; font-size:11px; letter-spacing:1.6px; }
+      .wire { fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+      .r { stroke:#c0392b; } .k { stroke:#2b2b2b; } .b { stroke:#2f6db0; }
+      .g { stroke:#2f8f5b; } .y { stroke:#b8860b; } .o { stroke:#d2691e; }
+      .p { stroke:#7b4fa8; } .gy { stroke:#7a7a7a; }
+    </style>
+  </defs>
+
+  <rect width="1240" height="780" fill="#f8f1e3"/>
+
+  <text x="40" y="46" class="title">Ƙura Alert field node — wiring map</text>
+  <text x="40" y="66" class="sub">ARDUINO UNO R4 WIFI · PMS5003 · RAIN GAUGE · HC-SR04 · DHT22 · I2C LCD</text>
+
+  <!-- board -->
+  <rect class="board" x="470" y="300" width="260" height="350" rx="14"/>
+  <text x="600" y="332" text-anchor="middle" fill="#eaf7f7" font-size="15" font-weight="600">Arduino UNO R4 WiFi</text>
+  <text x="600" y="350" text-anchor="middle" fill="#a9d7d7" font-size="10">5 V logic · built-in Wi-Fi</text>
+  <rect x="540" y="560" width="120" height="50" rx="6" fill="#0a4f52" stroke="#2f9ba0"/>
+  <text x="600" y="590" text-anchor="middle" fill="#d7eeee" font-size="10">USB-C · 5 V 2 A</text>
+
+  <!-- left pins -->
+  <g>
+    <g class="pinlabel" text-anchor="start" x="482">
+      <text y="386">5V</text><text y="411">GND</text><text y="436">3V3</text>
+      <text y="466">D0</text><text y="491">D1</text><text y="516">D2</text>
+      <text y="541">D3</text><text y="566">D4</text><text y="591">D5</text>
+    </g>
+    <circle class="pin" cx="474" cy="382" r="3"/><circle class="pin" cx="474" cy="407" r="3"/>
+    <circle class="pin" cx="474" cy="432" r="3"/><circle class="pin" cx="474" cy="462" r="3"/>
+    <circle class="pin" cx="474" cy="487" r="3"/><circle class="pin" cx="474" cy="512" r="3"/>
+    <circle class="pin" cx="474" cy="537" r="3"/><circle class="pin" cx="474" cy="562" r="3"/>
+    <circle class="pin" cx="474" cy="587" r="3"/>
+    <text x="482" y="606" fill="#a9d7d7" font-size="9">Serial1 · I2C</text>
+  </g>
+
+  <!-- right pins -->
+  <g>
+    <g class="pinlabel" text-anchor="end" x="718">
+      <text y="386">5V</text><text y="411">GND</text><text y="466">D6</text>
+      <text y="491">D7</text><text y="516">SDA</text><text y="541">SCL</text>
+    </g>
+    <circle class="pin" cx="726" cy="382" r="3"/><circle class="pin" cx="726" cy="407" r="3"/>
+    <circle class="pin" cx="726" cy="462" r="3"/><circle class="pin" cx="726" cy="487" r="3"/>
+    <circle class="pin" cx="726" cy="512" r="3"/><circle class="pin" cx="726" cy="537" r="3"/>
+  </g>
+
+  <!-- wires left -->
+  <path class="wire r" d="M330 101 H390 V382 H470"/>
+  <path class="wire k" d="M330 126 H402 V407 H470"/>
+  <path class="wire b" d="M330 151 H420 V462 H470"/>
+  <path class="wire g" d="M330 176 H410 V487 H470"/>
+  <path class="wire o" d="M330 201 H430 V432 H470"/>
+
+  <path class="wire y" d="M330 291 H360 V512 H470"/>
+  <path class="wire k" d="M330 316 H410 V407 H470"/>
+
+  <path class="wire r" d="M330 426 H440 V432 H470"/>
+  <path class="wire y" d="M330 451 H452 V587 H470"/>
+  <path class="wire k" d="M330 476 H458 V407 H470"/>
+
+  <path class="wire r" d="M330 566 H445 V382 H470"/>
+  <path class="wire b" d="M330 591 H438 V537 H470"/>
+  <path class="wire g" d="M330 616 H448 V562 H470"/>
+  <path class="wire k" d="M330 641 H442 V407 H470"/>
+
+  <!-- wires right -->
+  <path class="wire r" d="M910 106 H805 V382 H730"/>
+  <path class="wire k" d="M910 131 H815 V407 H730"/>
+  <path class="wire b" d="M910 156 H790 V512 H730"/>
+  <path class="wire g" d="M910 181 H798 V537 H730"/>
+  <path class="wire p" d="M910 596 H778 V462 H730"/>
+  <path class="wire k" d="M910 621 H812 V407 H730"/>
+  <path class="wire gy" d="M910 646 H770 V487 H730"/>
+  <path class="wire k" d="M910 671 H818 V407 H730"/>
+
+  <!-- PMS5003 -->
+  <rect class="box" x="40" y="58" width="290" height="170" rx="12"/>
+  <text class="t" x="60" y="86" font-weight="600">PMS5003 dust sensor</text>
+  <text class="small" x="60" y="104">UART 9600 · 5 V · 100 mA peak</text>
+  <g class="small">
+    <text x="292" y="105" text-anchor="end">VCC → 5V</text>
+    <text x="292" y="130" text-anchor="end">GND</text>
+    <text x="292" y="155" text-anchor="end">TX → D0</text>
+    <text x="292" y="180" text-anchor="end">RX → D1 (divider)</text>
+    <text x="292" y="205" text-anchor="end">SET → 3V3</text>
+  </g>
+
+  <!-- rain gauge -->
+  <rect class="box" x="40" y="248" width="290" height="120" rx="12"/>
+  <text class="t" x="60" y="276" font-weight="600">Tipping-bucket rain gauge</text>
+  <text class="small" x="60" y="294">reed switch · 0.2794 mm per tip</text>
+  <text class="small" x="60" y="312">D2 interrupt, INPUT_PULLUP</text>
+  <g class="small">
+    <text x="292" y="295" text-anchor="end">reed A → D2</text>
+    <text x="292" y="320" text-anchor="end">reed B → GND</text>
+  </g>
+
+  <!-- DHT22 -->
+  <rect class="box" x="40" y="388" width="290" height="118" rx="12"/>
+  <text class="t" x="60" y="416" font-weight="600">DHT22 temperature + humidity</text>
+  <text class="small" x="60" y="434">10 kΩ pull-up on DATA</text>
+  <g class="small">
+    <text x="292" y="430" text-anchor="end">VCC → 3V3</text>
+    <text x="292" y="455" text-anchor="end">DATA → D5</text>
+    <text x="292" y="480" text-anchor="end">GND</text>
+  </g>
+
+  <!-- HC-SR04 -->
+  <rect class="box" x="40" y="528" width="290" height="140" rx="12"/>
+  <text class="t" x="60" y="556" font-weight="600">HC-SR04 water level</text>
+  <text class="small" x="60" y="574">above channel bed · 3 m range</text>
+  <g class="small">
+    <text x="292" y="570" text-anchor="end">VCC → 5V</text>
+    <text x="292" y="595" text-anchor="end">TRIG → D3</text>
+    <text x="292" y="620" text-anchor="end">ECHO → D4</text>
+    <text x="292" y="645" text-anchor="end">GND</text>
+  </g>
+
+  <!-- LCD -->
+  <rect class="box" x="910" y="58" width="290" height="170" rx="12"/>
+  <text class="t" x="930" y="86" font-weight="600">LCD 16×2 · I2C backpack</text>
+  <text class="small" x="930" y="104">address 0x27 or 0x3F · backlight</text>
+  <g class="small">
+    <text x="930" y="135">VCC → 5V</text>
+    <text x="930" y="160">GND</text>
+    <text x="930" y="185">SDA → SDA</text>
+    <text x="930" y="210">SCL → SCL</text>
+  </g>
+
+  <!-- buzzer / button -->
+  <rect class="box" x="910" y="548" width="290" height="150" rx="12"/>
+  <text class="t" x="930" y="576" font-weight="600">Buzzer + backlight button</text>
+  <text class="small" x="930" y="594">active buzzer · momentary to GND</text>
+  <g class="small">
+    <text x="930" y="625">BUZ+ → D6</text>
+    <text x="930" y="650">BUZ− → GND</text>
+    <text x="930" y="675">BTN → D7 / GND</text>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(470 680)">
+    <text class="small" x="0" y="3">Wire key:</text>
+    <line class="wire r" x1="62" y1="0" x2="86" y2="0"/><text class="small" x="90" y="3">5 V</text>
+    <line class="wire k" x1="126" y1="0" x2="150" y2="0"/><text class="small" x="154" y="3">GND</text>
+    <line class="wire o" x1="190" y1="0" x2="214" y2="0"/><text class="small" x="218" y="3">3.3 V</text>
+    <line class="wire b" x1="262" y1="0" x2="286" y2="0"/><text class="small" x="290" y="3">data</text>
+  </g>
+
+  <text x="40" y="742" class="small">Power off before wiring. The PMS5003 RX pin is 3.3 V logic: use a 1 kΩ / 2 kΩ divider from D1. Keep all grounds common.</text>
+  <text x="40" y="760" class="small">Firmware and calibration: hardware/kura_node/kura_node.ino · config.h ∈ ../README.md</text>
+</svg>

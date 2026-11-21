@@ -1,0 +1,474 @@
+{
+ "generated_at": "2026-11-15T06:13:05+00:00",
+ "note": "Historical replay and sensitivity checks. Not a forecast skill score: no archived forecast fields were available.",
+ "holdout": {
+  "method": "For each harmattan season, percentile thresholds are trained on the other three seasons. Days are labelled dusty/clean by the top/bottom decile of that held-out season's CAMS AOD, not by the index score.",
+  "seasons": [
+   {
+    "season": "2022/23",
+    "days": 151,
+    "label": "top/bottom decile by CAMS AOD in the held-out season",
+    "aod_p90": 0.408,
+    "aod_p10": 0.153,
+    "dusty": {
+     "n": 16,
+     "high_or_severe": 3,
+     "median_score": 42.5
+    },
+    "clean": {
+     "n": 17,
+     "low_or_moderate": 17,
+     "median_score": 23.8
+    }
+   },
+   {
+    "season": "2023/24",
+    "days": 152,
+    "label": "top/bottom decile by CAMS AOD in the held-out season",
+    "aod_p90": 0.814,
+    "aod_p10": 0.256,
+    "dusty": {
+     "n": 17,
+     "high_or_severe": 17,
+     "median_score": 84.8
+    },
+    "clean": {
+     "n": 16,
+     "low_or_moderate": 16,
+     "median_score": 42.7
+    }
+   },
+   {
+    "season": "2024/25",
+    "days": 151,
+    "label": "top/bottom decile by CAMS AOD in the held-out season",
+    "aod_p90": 0.475,
+    "aod_p10": 0.161,
+    "dusty": {
+     "n": 16,
+     "high_or_severe": 2,
+     "median_score": 61.1
+    },
+    "clean": {
+     "n": 16,
+     "low_or_moderate": 16,
+     "median_score": 32.8
+    }
+   },
+   {
+    "season": "2025/26",
+    "days": 151,
+    "label": "top/bottom decile by CAMS AOD in the held-out season",
+    "aod_p90": 0.486,
+    "aod_p10": 0.172,
+    "dusty": {
+     "n": 16,
+     "high_or_severe": 2,
+     "median_score": 68.8
+    },
+    "clean": {
+     "n": 16,
+     "low_or_moderate": 16,
+     "median_score": 20.0
+    }
+   }
+  ],
+  "pooled": {
+   "dusty": {
+    "n": 65,
+    "hit": 24,
+    "hit_rate": 0.369,
+    "median_score": 67.5,
+    "levels": {
+     "low": 17,
+     "moderate": 24,
+     "high": 22,
+     "severe": 2
+    }
+   },
+   "clean": {
+    "n": 65,
+    "hit": 65,
+    "hit_rate": 1.0,
+    "median_score": 27.8,
+    "levels": {
+     "low": 56,
+     "moderate": 9,
+     "high": 0,
+     "severe": 0
+    }
+   }
+  },
+  "caveat": "CAMS AOD is also a 25% input to the index, so this is a consistency check, not an independent forecast verification."
+ },
+ "nasa_crosscheck": {
+  "method": "2025/26 is held out from threshold training. Days are labelled by NASA MERRA-2 AOD_55 from POWER, then scored with the CAMS/ERA5 index.",
+  "n": 151,
+  "nasa_aod_p90": 0.64,
+  "nasa_aod_p10": 0.22,
+  "dusty": {
+   "n": 16,
+   "high_or_severe": 2,
+   "hit_rate": 0.125,
+   "levels": {
+    "low": 2,
+    "moderate": 12,
+    "high": 2,
+    "severe": 0
+   }
+  },
+  "clean": {
+   "n": 19,
+   "low_or_moderate": 19,
+   "hit_rate": 1.0,
+   "levels": {
+    "low": 19,
+    "moderate": 0,
+    "high": 0,
+    "severe": 0
+   }
+  },
+  "top5": [
+   {
+    "date": "2026-02-18",
+    "nasa_aod": 1.58,
+    "cams_dust": 835.4,
+    "score": 75.7,
+    "level": "high"
+   },
+   {
+    "date": "2026-02-17",
+    "nasa_aod": 1.26,
+    "cams_dust": 825.0,
+    "score": 72.8,
+    "level": "moderate"
+   },
+   {
+    "date": "2026-02-20",
+    "nasa_aod": 0.99,
+    "cams_dust": 813.9,
+    "score": 70.0,
+    "level": "moderate"
+   },
+   {
+    "date": "2026-02-19",
+    "nasa_aod": 0.93,
+    "cams_dust": 749.5,
+    "score": 70.4,
+    "level": "moderate"
+   },
+   {
+    "date": "2026-03-31",
+    "nasa_aod": 0.93,
+    "cams_dust": 319.8,
+    "score": 65.0,
+    "level": "moderate"
+   }
+  ],
+  "bottom5": [
+   {
+    "date": "2026-03-01",
+    "nasa_aod": 0.03,
+    "cams_dust": 539.4,
+    "score": 49.7,
+    "level": "low"
+   },
+   {
+    "date": "2025-12-29",
+    "nasa_aod": 0.17,
+    "cams_dust": 165.5,
+    "score": 21.0,
+    "level": "low"
+   },
+   {
+    "date": "2025-11-22",
+    "nasa_aod": 0.18,
+    "cams_dust": 58.9,
+    "score": 18.3,
+    "level": "low"
+   },
+   {
+    "date": "2025-12-28",
+    "nasa_aod": 0.18,
+    "cams_dust": 173.8,
+    "score": 21.2,
+    "level": "low"
+   },
+   {
+    "date": "2025-11-01",
+    "nasa_aod": 0.19,
+    "cams_dust": 91.4,
+    "score": 31.0,
+    "level": "low"
+   }
+  ],
+  "caveat": "CAMS AOD and NASA MERRA-2 AOD are correlated (r = 0.644 over 605 days). This checks cross-source agreement; it is not an independent forecast skill score."
+ },
+ "known_events": {
+  "method": "Top five and bottom five days by observed CAMS daily dust. Each is scored with thresholds trained on the other three seasons.",
+  "dusty": [
+   {
+    "date": "2024-02-05",
+    "season": "2023/24",
+    "dust_ugm3": 2353.8,
+    "aod": 0.768,
+    "score": 95.9,
+    "level": "severe",
+    "guardrails": []
+   },
+   {
+    "date": "2024-02-06",
+    "season": "2023/24",
+    "dust_ugm3": 2302.1,
+    "aod": 0.765,
+    "score": 92.9,
+    "level": "severe",
+    "guardrails": []
+   },
+   {
+    "date": "2024-02-04",
+    "season": "2023/24",
+    "dust_ugm3": 2051.0,
+    "aod": 0.807,
+    "score": 95.2,
+    "level": "severe",
+    "guardrails": []
+   },
+   {
+    "date": "2024-02-07",
+    "season": "2023/24",
+    "dust_ugm3": 1954.9,
+    "aod": 0.703,
+    "score": 87.3,
+    "level": "high",
+    "guardrails": []
+   },
+   {
+    "date": "2024-02-03",
+    "season": "2023/24",
+    "dust_ugm3": 1902.0,
+    "aod": 0.902,
+    "score": 92.9,
+    "level": "severe",
+    "guardrails": []
+   }
+  ],
+  "clean": [
+   {
+    "date": "2022-12-14",
+    "season": "2022/23",
+    "dust_ugm3": 0.0,
+    "aod": 0.031,
+    "score": 14.2,
+    "level": "low",
+    "guardrails": [
+     "clean-air cap: dust below 15th percentile"
+    ]
+   },
+   {
+    "date": "2022-12-15",
+    "season": "2022/23",
+    "dust_ugm3": 0.0,
+    "aod": 0.037,
+    "score": 16.3,
+    "level": "low",
+    "guardrails": [
+     "clean-air cap: dust below 15th percentile"
+    ]
+   },
+   {
+    "date": "2023-11-04",
+    "season": "2023/24",
+    "dust_ugm3": 28.2,
+    "aod": 0.347,
+    "score": 16.3,
+    "level": "low",
+    "guardrails": [
+     "clean-air cap: dust below 15th percentile",
+     "rain washout: 10-point reduction"
+    ]
+   },
+   {
+    "date": "2025-11-11",
+    "season": "2025/26",
+    "dust_ugm3": 31.2,
+    "aod": 0.151,
+    "score": 16.4,
+    "level": "low",
+    "guardrails": [
+     "clean-air cap: dust below 15th percentile"
+    ]
+   },
+   {
+    "date": "2024-11-14",
+    "season": "2024/25",
+    "dust_ugm3": 32.5,
+    "aod": 0.095,
+    "score": 18.1,
+    "level": "low",
+    "guardrails": [
+     "clean-air cap: dust below 15th percentile"
+    ]
+   }
+  ],
+  "dusty_high_or_severe": 5,
+  "clean_low": 5
+ },
+ "sensitivity": {
+  "method": "All 605 harmattan days are re-scored with alternative weights; the same percentile inputs, clean-air caps and rain washout are applied.",
+  "days": 605,
+  "baseline_levels": {
+   "low": 315,
+   "moderate": 215,
+   "high": 66,
+   "severe": 9
+  },
+  "scenarios": [
+   {
+    "name": "baseline",
+    "weights": {
+     "dust": 0.5,
+     "aod": 0.25,
+     "wind": 0.15,
+     "dryness": 0.1
+    },
+    "changed_days": 0,
+    "changed_pct": 0.0,
+    "max_score_delta": 0.0,
+    "levels": {
+     "low": 315,
+     "moderate": 215,
+     "high": 66,
+     "severe": 9
+    }
+   },
+   {
+    "name": "plausible_plus",
+    "weights": {
+     "dust": 0.55,
+     "aod": 0.275,
+     "wind": 0.165,
+     "dryness": 0.11
+    },
+    "changed_days": 0,
+    "changed_pct": 0.0,
+    "max_score_delta": 0.1,
+    "levels": {
+     "low": 315,
+     "moderate": 215,
+     "high": 66,
+     "severe": 9
+    }
+   },
+   {
+    "name": "plausible_minus",
+    "weights": {
+     "dust": 0.45,
+     "aod": 0.225,
+     "wind": 0.135,
+     "dryness": 0.09
+    },
+    "changed_days": 0,
+    "changed_pct": 0.0,
+    "max_score_delta": 0.1,
+    "levels": {
+     "low": 315,
+     "moderate": 215,
+     "high": 66,
+     "severe": 9
+    }
+   },
+   {
+    "name": "equal_weights",
+    "weights": {
+     "dust": 0.25,
+     "aod": 0.25,
+     "wind": 0.25,
+     "dryness": 0.25
+    },
+    "changed_days": 112,
+    "changed_pct": 18.5,
+    "max_score_delta": 19.1,
+    "levels": {
+     "low": 312,
+     "moderate": 256,
+     "high": 33,
+     "severe": 4
+    }
+   },
+   {
+    "name": "dust_heavy",
+    "weights": {
+     "dust": 0.65,
+     "aod": 0.15,
+     "wind": 0.1,
+     "dryness": 0.1
+    },
+    "changed_days": 46,
+    "changed_pct": 7.6,
+    "max_score_delta": 10.3,
+    "levels": {
+     "low": 307,
+     "moderate": 206,
+     "high": 80,
+     "severe": 12
+    }
+   },
+   {
+    "name": "aod_heavy",
+    "weights": {
+     "dust": 0.35,
+     "aod": 0.4,
+     "wind": 0.15,
+     "dryness": 0.1
+    },
+    "changed_days": 47,
+    "changed_pct": 7.8,
+    "max_score_delta": 13.6,
+    "levels": {
+     "low": 311,
+     "moderate": 215,
+     "high": 71,
+     "severe": 8
+    }
+   },
+   {
+    "name": "no_wind_dryness",
+    "weights": {
+     "dust": 0.65,
+     "aod": 0.35,
+     "wind": 0.0,
+     "dryness": 0.0
+    },
+    "changed_days": 117,
+    "changed_pct": 19.3,
+    "max_score_delta": 18.9,
+    "levels": {
+     "low": 315,
+     "moderate": 163,
+     "high": 85,
+     "severe": 42
+    }
+   },
+   {
+    "name": "wind_dry_heavy",
+    "weights": {
+     "dust": 0.35,
+     "aod": 0.15,
+     "wind": 0.3,
+     "dryness": 0.2
+    },
+    "changed_days": 98,
+    "changed_pct": 16.2,
+    "max_score_delta": 18.9,
+    "levels": {
+     "low": 309,
+     "moderate": 251,
+     "high": 40,
+     "severe": 5
+    }
+   }
+  ],
+  "caveat": "Levels change only near a cut boundary. The purpose is to show the index is not a finely tuned fit; it is a transparent ranking."
+ }
+}
